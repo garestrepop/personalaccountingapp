@@ -4,7 +4,7 @@ This is an app that allow you manager personal budget, the incomens and expenses
 
 Tech stack
 * DB. SQL_LITE / MONGO
-* Backend:  Java 11 (LTS). Spring-Boot 3.0.X
+* Backend:  Java 17 (LTS). Spring-Boot 3.0.X
 * Frontend: NextJs 13.
 
 Deployment
