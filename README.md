@@ -1,6 +1,6 @@
 # personalaccountingapp
 Personal Accounting APP.
-This is an app that allow you manager personal budget, the incomens and expenses,  to keep track your money and to know how you can manager better.
+This is an app that allow you to manager personal budget, the incomes and expenses,  to keep track your money and to know how you can manager better.
 
 Tech stack
 * DB. SQL_LITE / MONGO
