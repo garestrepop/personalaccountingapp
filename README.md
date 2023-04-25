@@ -15,3 +15,5 @@ Architecture
 
 Goals
 * To prove my knowledge in Java through by full stack development an app.
+
+This project is building.
