@@ -2,18 +2,18 @@
 Personal Accounting APP.
 This is an app that allow you to manager personal budget, the incomes and expenses,  to keep track your money and to know how you can manager better.
 
-Tech stack
+**Tech stack**
 * DB. SQL Server 2022 (ED) / MONGO
 * Backend:  Java 17 (LTS). Spring Framework,  Spring-Boot 3.0.X, Spring Data JPA 3.0.x,  Spring Security  
 * Frontend: NextJs 13.
 
-Deployment
+**Deployment**
 * Docker
 
-Architecture
+**Architecture**
 * Clean Architecture.
 
-Goals
+**Goals**
 * To prove my knowledge in Java through by full stack development an app.
 
-This project is building.
+**This project is building.**
