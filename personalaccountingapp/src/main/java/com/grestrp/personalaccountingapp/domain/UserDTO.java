@@ -1,60 +1,21 @@
-package com.grestrp.personalaccountingapp.persistence.entity;
-
-import jakarta.persistence.*;
-
+package com.grestrp.personalaccountingapp.domain;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
-@Entity
-@Table(name="dbo.USER")
-public class User {
+public class UserDTO {
 
     // Attributes
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
     private Integer id;
-
-    @Column(name = "NAME")
     private String name;
-
-    @Column(name = "LASTNAME")
     private String lastname;
-
-    @Column(name = "MOVILPHONE")
     private String movilphone;
-
-    @Column(name = "EMAIL")
     private String email;
-
-    @Column(name = "USERNAME")
     private String username;
-
-    @Column(name = "PASSWORD")
     private String password;
-
-    @Column(name = "STATEDID")
     private Integer stateid;
-
-    @Column(name = "CREATEDAT")
     private LocalDateTime createdat;
-
-    @Column(name = "UPDATEDAT")
     private LocalDateTime updatedat;
-
-    // Relations
-
-    @OneToMany(mappedBy = "user")
-    private List<Budget> budget;
-
-    @OneToMany(mappedBy = "user")
-    private List<Transaction> transaction;
-
-    @ManyToOne
-    @JoinColumn(name = "ID", insertable = false, updatable = false)
-    private State state;
 
     // Methods
 
@@ -134,7 +95,7 @@ public class User {
         return updatedat;
     }
 
-    public void setUpdatedat(LocalDateTime updateat) {
+    public void setUpdatedat(LocalDateTime updatedat) {
         this.updatedat = updatedat;
     }
 }

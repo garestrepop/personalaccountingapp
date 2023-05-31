@@ -1,38 +1,14 @@
-package com.grestrp.personalaccountingapp.persistence.entity;
-
-
-import jakarta.persistence.*;
+package com.grestrp.personalaccountingapp.domain;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
-@Entity
-@Table(name = "dbo.ITEM")
-public class Item {
-
+public class ItemDTO {
     // Attributes
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
     private Integer id;
-
-    @Column(name = "NAME")
     private String Name;
-
-    @Column(name = "STATEID")
     private String stateid;
-
-    @Column(name = "CREATEDAT")
     private LocalDateTime createdat;
-
-    @Column(name = "UPDATEDAT")
     private LocalDateTime updatedat;
-
-    // Relations
-
-    @OneToMany(mappedBy = "item")
-    private List<Transaction> transaction;
 
     // Methods
 

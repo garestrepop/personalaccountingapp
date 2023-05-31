@@ -1,54 +1,25 @@
-package com.grestrp.personalaccountingapp.persistence.entity;
+package com.grestrp.personalaccountingapp.domain;
 
-import jakarta.persistence.*;
+import com.grestrp.personalaccountingapp.persistence.entity.Transaction;
+import com.grestrp.personalaccountingapp.persistence.entity.User;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Entity
-@Table(name="dbo.BUDGET")
-public class Budget {
+public class BudgetDTO {
 
     // Attributes
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
     private Integer id;
-
-    @Column(name = "NAME")
     private String name;
-
-    @Column(name = "STARTDATE")
     private LocalDateTime startdate;
-
-    @Column(name = "ENDDATE")
     private LocalDateTime enddate;
-
-    @Column(name = "USERID")
     private Integer userid;
-
-    @Column(name = "STATEID")
     private Integer stateid;
-
-    @Column(name = "CREATEDAT")
     private LocalDateTime createdat;
-
-    @Column(name = "UPADATEDAT")
     private LocalDateTime updatedat;
 
-    // Relations
-
-    @OneToMany(mappedBy = "budget")
     private List<Transaction> transaction;
-
-    @ManyToOne
-    @JoinColumn(name = "ID", insertable = false, updatable = false)
     private User user;
-
-    @ManyToOne
-    @JoinColumn(name = "ID", insertable = false, updatable = false)
-    private State state;
 
     // Methods
 
@@ -115,4 +86,21 @@ public class Budget {
     public void setUpdatedat(LocalDateTime updatedat) {
         this.updatedat = updatedat;
     }
+
+    public List<Transaction> getTransaction() {
+        return transaction;
+    }
+
+    public void setTransaction(List<Transaction> transaction) {
+        this.transaction = transaction;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
 }

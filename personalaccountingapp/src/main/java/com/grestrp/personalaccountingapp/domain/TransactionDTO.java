@@ -1,72 +1,32 @@
-package com.grestrp.personalaccountingapp.persistence.entity;
+package com.grestrp.personalaccountingapp.domain;
 
-
-import jakarta.persistence.*;
+import com.grestrp.personalaccountingapp.persistence.entity.Budget;
+import com.grestrp.personalaccountingapp.persistence.entity.Item;
+import com.grestrp.personalaccountingapp.persistence.entity.TypeTransaction;
+import com.grestrp.personalaccountingapp.persistence.entity.User;
 
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "dbo.TRANSACTION")
-public class Transaction {
+public class TransactionDTO {
 
     // Attributes
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
     private Integer id;
-
-    @Column(name = "BUDGETID")
     private Integer budgetid;
-
-    @Column(name = "TYPEID")
     private Integer typeid;
-
-    @Column(name = "STARTDATE")
     private LocalDateTime startdate;
-
-    @Column(name = "ENDDATE")
     private LocalDateTime enddate;
-
-    @Column(name = "ITEMID")
     private Integer itemid;
-
-    @Column(name = "VALOR")
     private Double valor;
-
-    @Column(name = "USERID")
     private Integer userid;
-
-    @Column(name = "STATEID")
     private Integer stateid;
-
-    @Column(name = "CREATEDAT")
     private LocalDateTime createdat;
-
-    @Column(name = "UPDATEDAT")
     private LocalDateTime updatedat;
 
-    // Relations
-
-    @ManyToOne
-    @JoinColumn(name = "ID", insertable = false, updatable = false)
     private Budget budget;
-
-    @ManyToOne
-    @JoinColumn(name = "ID", insertable = false, updatable = false)
     private TypeTransaction typetransaction;
-
-    @ManyToOne
-    @JoinColumn(name = "ID", insertable = false, updatable = false)
     private Item item;
-
-    @ManyToOne
-    @JoinColumn(name = "ID", insertable = false, updatable = false)
     private User user;
-
-    @ManyToOne
-    @JoinColumn(name = "ID", insertable = false, updatable = false)
-    private State state;
 
     // Methods
 
@@ -156,5 +116,37 @@ public class Transaction {
 
     public void setUpdatedat(LocalDateTime updatedat) {
         this.updatedat = updatedat;
+    }
+
+    public Budget getBudget() {
+        return budget;
+    }
+
+    public void setBudget(Budget budget) {
+        this.budget = budget;
+    }
+
+    public TypeTransaction getTypetransaction() {
+        return typetransaction;
+    }
+
+    public void setTypetransaction(TypeTransaction typetransaction) {
+        this.typetransaction = typetransaction;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
