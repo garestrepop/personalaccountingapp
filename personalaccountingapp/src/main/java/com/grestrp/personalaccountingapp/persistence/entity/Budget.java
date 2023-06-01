@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Table(name="dbo.BUDGET")
+@Table(name="[BUDGET]")
 public class Budget {
 
     // Attributes

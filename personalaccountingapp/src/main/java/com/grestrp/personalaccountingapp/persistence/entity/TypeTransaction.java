@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="dbo.TYPETRANSACTION")
+@Table(name="[TYPETRANSACTION]")
 public class TypeTransaction {
 
     // Attributes

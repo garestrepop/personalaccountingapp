@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "dbo.TRANSACTION")
+@Table(name = "[TRANSACTION]")
 public class Transaction {
 
     // Attributes

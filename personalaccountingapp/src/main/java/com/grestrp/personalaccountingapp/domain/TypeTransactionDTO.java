@@ -4,17 +4,17 @@ public class TypeTransactionDTO {
 
     // Attributes
 
-    private Integer id;
+    private Integer typeTransactionId;
     private String name;
 
     // Methods
 
     public Integer getId() {
-        return id;
+        return typeTransactionId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId(Integer typeTransactionId) {
+        this.typeTransactionId = typeTransactionId;
     }
 
     public String getName() {

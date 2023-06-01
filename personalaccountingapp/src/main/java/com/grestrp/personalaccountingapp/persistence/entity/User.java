@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Table(name="dbo.USER")
+@Table(name="[USER]")
 public class User {
 
     // Attributes
@@ -35,7 +35,7 @@ public class User {
     @Column(name = "PASSWORD")
     private String password;
 
-    @Column(name = "STATEDID")
+    @Column(name = "STATEID")
     private Integer stateid;
 
     @Column(name = "CREATEDAT")

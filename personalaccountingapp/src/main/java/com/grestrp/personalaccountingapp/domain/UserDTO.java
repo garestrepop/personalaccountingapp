@@ -6,7 +6,7 @@ public class UserDTO {
 
     // Attributes
 
-    private Integer id;
+    private Integer userId;
     private String name;
     private String lastname;
     private String movilphone;
@@ -20,11 +20,11 @@ public class UserDTO {
     // Methods
 
     public Integer getId() {
-        return id;
+        return userId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId(Integer userId) {
+        this.userId = userId;
     }
 
     public String getName() {

@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Table(name = "dbo.ITEM")
+@Table(name = "[ITEM]")
 public class Item {
 
     // Attributes
@@ -18,7 +18,7 @@ public class Item {
     private Integer id;
 
     @Column(name = "NAME")
-    private String Name;
+    private String name;
 
     @Column(name = "STATEID")
     private String stateid;
@@ -45,11 +45,11 @@ public class Item {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getStateid() {

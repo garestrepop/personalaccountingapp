@@ -11,7 +11,7 @@ public class TransactionDTO {
 
     // Attributes
 
-    private Integer id;
+    private Integer transactionId;
     private Integer budgetid;
     private Integer typeid;
     private LocalDateTime startdate;
@@ -31,11 +31,11 @@ public class TransactionDTO {
     // Methods
 
     public Integer getId() {
-        return id;
+        return transactionId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId(Integer transactionId) {
+        this.transactionId = transactionId;
     }
 
     public Integer getBudgetid() {

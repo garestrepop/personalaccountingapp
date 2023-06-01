@@ -5,14 +5,14 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "dbo.STATE")
+@Table(name = "STATE")
 public class State {
 
     // Attributes
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
+    @Column(name = "[ID]")
     private Integer id;
 
     @Column(name = "NAME")

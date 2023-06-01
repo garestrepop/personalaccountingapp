@@ -4,17 +4,17 @@ public class StateDTO {
 
     // Attributes
 
-    private Integer id;
+    private Integer stateId;
     private String Name;
 
     // Methods
 
     public Integer getId() {
-        return id;
+        return stateId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId(Integer stateId) {
+        this.stateId = stateId;
     }
 
     public String getName() {
